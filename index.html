@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>👑 أميرتي قطايف 👑</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Tahoma;
+}
+
+body{
+
+overflow:hidden;
+
+height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+radial-gradient(circle at top,#ffe55b,#d9b100 15%,#1b163b 55%,#060610 100%);
+
+}
+
+.space{
+
+position:absolute;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+}
+
+.star{
+
+position:absolute;
+
+width:2px;
+
+height:2px;
+
+background:white;
+
+border-radius:50%;
+
+animation:shine 2s infinite alternate;
+
+}
+
+@keyframes shine{
+
+from{
+
+opacity:.2;
+
+transform:scale(.8);
+
+}
+
+to{
+
+opacity:1;
+
+transform:scale(1.5);
+
+}
+
+}
+
+.planet1{
+
+position:absolute;
+
+width:260px;
+
+height:260px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,#ffe97a,#e0a800,#7a5400);
+
+top:-70px;
+
+right:-70px;
+
+box-shadow:0 0 80px gold;
+
+animation:rotatePlanet 40s linear infinite;
+
+}
+
+.planet2{
+
+position:absolute;
+
+width:140px;
+
+height:140px;
+
+border-radius:50%;
+
+background:
+radial-gradient(circle,#fff8a8,#ffd54f,#9a7000);
+
+bottom:-30px;
+
+left:-30px;
+
+box-shadow:0 0 40px #ffd54f;
+
+animation:rotatePlanet 30s linear infinite reverse;
+
+}
+
+@keyframes rotatePlanet{
+
+from{
+
+transform:rotate(0deg);
+
+}
+
+to{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+.card{
+
+position:relative;
+
+z-index:10;
+
+width:80%;
+
+max-width:900px;
+
+padding:60px;
+
+border-radius:30px;
+
+background:rgba(0,0,0,.28);
+
+backdrop-filter:blur(10px);
+
+text-align:center;
+
+color:white;
+
+border:1px solid rgba(255,255,255,.2);
+
+}
+
+h1{
+
+font-size:65px;
+
+color:#FFD54F;
+
+text-shadow:0 0 30px gold;
+
+margin-bottom:35px;
+
+}
+
+.quote{
+
+font-size:28px;
+
+line-height:2.2;
+
+font-weight:bold;
+
+text-shadow:0 0 10px rgba(255,255,255,.4);
+
+}
+
+.gold{
+
+color:#FFD54F;
+
+}</style>
+
+</head>
+
+<body>
+
+<div class="space">
+
+<div class="planet1"></div>
+
+<div class="planet2"></div>
+
+</div>
+
+<div class="card">
+
+<h1>👑 أميرتي قطايف 👑</h1>
+
+<div class="quote">
+
+يقولون إن السماء تضم <span class="gold">مليارات النجوم</span>...
+
+<br><br>
+
+لكنهم ما عرفوا أن نجمةً واحدة
+
+كانت كافية لتسرق ضوءها كله.
+
+<br><br>
+
+ومنذ أن عرفتكِ...
+
+<br><br>
+
+صارت السماء تُشبهكِ أكثر
+
+مما تُشبه نفسها.
+
+<br><br>
+
+ولو خُيِّرت بين أن أعدَّ نجوم الكون كلها...
+
+<br><br>
+
+أو أن أصف جمالكِ...
+
+<br><br>
+
+لانتهت النجوم،
+
+وبقي جمالكِ بلا نهاية. ✨🤍
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<350;i++){
+
+let star=document.createElement("div");
+
+star.className="star";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDuration=(1+Math.random()*4)+"s";
+
+document.querySelector(".space").appendChild(star);
+
+}</script>
+
+</body>
+
+</html>
